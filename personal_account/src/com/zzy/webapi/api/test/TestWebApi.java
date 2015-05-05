@@ -28,7 +28,7 @@ public class TestWebApi extends WebSendMailTest<EmailApi> {
 
 	
 	@Test
-	public void testSelectProduct() { // 获取全部task
+	public void testSelectProduct() { // 获取全部product
 		this.setUp(this.getUrl("/email/select/product"));
 		this.addParam("productType", "ACTIVE");
 		this.addParam("iDisplayStart", 0);
