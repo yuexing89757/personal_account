@@ -16,5 +16,8 @@
 			<column name="contents" />
 		 </property> 
 		 
+		 <property name="personNames">
+			<column name="person_names" />
+		 </property> 
 	</class>
 </hibernate-mapping>
