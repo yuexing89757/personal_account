@@ -10,7 +10,7 @@
 		<!-- Basic -->
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
-		<property name="hibernate.connection.url">jdbc:mysql://121.42.139.127:3306/personal_account?useUnicode=true&amp;characterEncoding=UTF-8&amp;mysqlEncoding=utf-8</property>
+		<property name="hibernate.connection.url">jdbc:mysql://121.42.139.127:3306/xrmy_main?useUnicode=true&amp;characterEncoding=UTF-8&amp;mysqlEncoding=utf-8</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">gkg5224271</property>
 		<property name="hibernate.connection.default_schema">email</property>
@@ -35,6 +35,6 @@
 		<mapping resource="config/hbm/User.hbm.xml" />
 		<mapping resource="config/hbm/Score.hbm.xml" />
 		<mapping resource="config/hbm/Event.hbm.xml" />
-		<mapping resource="config/hbm/PersonAcc.hbm.xml" />
+			<!-- <mapping resource="config/hbm/PersonAcc.hbm.xml" />-->
 	</session-factory>
 </hibernate-configuration>

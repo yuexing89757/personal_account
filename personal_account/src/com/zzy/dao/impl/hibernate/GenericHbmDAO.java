@@ -42,27 +42,13 @@ public abstract class GenericHbmDAO<T, ID extends Serializable>
 		this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 	
-	//shard专用
-	public GenericHbmDAO(Long adId, GetShardType shardType) {
-		this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-		this.adId = adId;
-		this.shardType = shardType;
-	}
-	
 
 	protected Session getSession() {
 		session = HibernateManager.openSession();
 		return session;
 	}
 	
-	protected synchronized Session getShardSession() {  //shard专用
-		if(GetShardType.ADVERTISER == this.shardType){
-			return HibernateManagerShard.getCurrentSessionByAdvertiserId(adId); 
-		}else {
-			return null;
-		}
-		
-	}
+
 
 	
 	
@@ -94,8 +80,7 @@ public abstract class GenericHbmDAO<T, ID extends Serializable>
 	 *         Criteria
 	 */
 	protected Criteria createCriteria() {
-		Criteria crit = this.getSession().createCriteria(
-				this.getPersistentClass());
+		Criteria crit = this.getSession().createCriteria(this.getPersistentClass());
 		return crit;
 	}
 

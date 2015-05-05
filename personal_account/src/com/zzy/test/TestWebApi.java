@@ -15,6 +15,7 @@ import org.junit.Test;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.zzy.webapi.api.EmailApi;
 
 /**
  * @name TestWebApi
@@ -29,7 +30,7 @@ import com.google.gson.reflect.TypeToken;
  * 
  * @version 1.0
  */
-public class TestWebApi extends WebSendMailTest<TestApi> {
+public class TestWebApi extends WebSendMailTest<EmailApi> {
 
 	@Test
 	public void testMethod() { // 测试发邮件

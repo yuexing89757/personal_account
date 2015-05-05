@@ -15,6 +15,11 @@ import com.zzy.util.Paging;
 
 public class ProductDaoImpl extends GenericHbmDAO<Product, Long> implements ProductDao {
 
+	public ProductDaoImpl() {
+		super();
+	}
+	
+	
 	public List<Product> findByPage(ProductType productType, Paging paging) {
 		Criteria criteria = this.createCriteria();
 		if(null!=productType){

@@ -3,9 +3,9 @@
 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.zzy.model.shard">
+<hibernate-mapping package="com.zzy.model">
 	
-	<class name="PersonAcc" table="person_acc">
+	<class name="PersonAcc" table="person_acc">  
 	
 		<id name="id" type="java.lang.Long">
 			<column name="id" />

@@ -1,5 +1,6 @@
 package com.zzy.dao.impl;
 
+import java.lang.reflect.ParameterizedType;
 import java.util.Date;
 import java.util.List;
 
@@ -22,6 +23,12 @@ import com.zzy.util.UncheckedException;
 
 public class EmailTaskDaoImpl extends GenericHbmDAO<EmailTask, Long> implements EmailTaskDao {
 
+	public EmailTaskDaoImpl() {
+		super();
+	}
+	
+	
+	
 	public boolean addEmailTask(EmailTask emailTask) {
 		try {
 			makePersistent(emailTask);
