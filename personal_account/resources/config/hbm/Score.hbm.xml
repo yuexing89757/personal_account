@@ -5,16 +5,24 @@
 
 <hibernate-mapping package="com.zzy.model">
 	
-	<class name="Event" table="event">
+	<class name="Score" table="score">
 	
 		<id name="id" type="java.lang.Long">
 			<column name="id" />
 			<generator class="native"/>
 		 </id> 
 		
-		<property name="contents">
-			<column name="contents" />
+		<property name="eventId" type="java.lang.Long">
+			<column name="event_id" />
 		 </property> 
 		 
+		<property name="personAccId" type="java.lang.Long">
+		    <column name="person_acc_id" />
+		</property> 
+		
+		<property name="score" type="java.lang.Integer">
+		    <column name="score" />
+		</property> 
+		
 	</class>
 </hibernate-mapping>

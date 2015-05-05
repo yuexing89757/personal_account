@@ -5,18 +5,19 @@ import com.zzy.model.supermodel.ModelObject;
 public class PersonAcc extends ModelObject<Long> {
 
 	private String contents;
-	private String personNames;
+	private String personName;
+	
 	public String getContents() {
 		return contents;
 	}
 	public void setContents(String contents) {
 		this.contents = contents;
 	}
-	public String getPersonNames() {
-		return personNames;
+	public String getPersonName() {
+		return personName;
 	}
-	public void setPersonNames(String personNames) {
-		this.personNames = personNames;
+	public void setPersonNames(String personName) {
+		this.personName = personName;
 	}
 
 	
