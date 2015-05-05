@@ -10,6 +10,8 @@ import org.junit.Test;
 
 import com.zzy.webapi.api.EmailApi;
 
+
+
 /**
  * @name TestWebApi
  * 
@@ -27,21 +29,5 @@ public class TestWebApi extends WebSendMailTest<EmailApi> {
 
 
 	
-	@Test
-	public void testSelectProduct() { // 获取全部product
-		this.setUp(this.getUrl("/email/select/product"));
-		this.addParam("productType", "ACTIVE");
-		this.addParam("iDisplayStart", 0);
-		this.addParam("iDisplayLength", 20);
-		this.testResonse(this.createApiRequest());
-	}
-	
-	@Test
-	public void testSelectNews() { // 获取全部task
-		this.setUp(this.getUrl("/email/select/news"));
-		this.addParam("newsType", "COMPANY");
-		this.addParam("iDisplayStart", 0);
-		this.addParam("iDisplayLength", 20);
-		this.testResonse(this.createApiRequest());
-	}
+
 }

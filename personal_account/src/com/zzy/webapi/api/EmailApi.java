@@ -15,21 +15,15 @@ import org.xml.sax.SAXException;
 import com.zzy.anotation.ApiPath;
 import com.zzy.biz.EmailTaskBiz;
 import com.zzy.biz.IMailUserInfoBiz;
-import com.zzy.biz.INewsBiz;
-import com.zzy.biz.IProductBiz;
 import com.zzy.biz.ISendMail;
 import com.zzy.biz.impl.EmailTaskBizImpl;
 import com.zzy.biz.impl.MailUserInfoBizImpl;
-import com.zzy.biz.impl.NewsBizImpl;
-import com.zzy.biz.impl.ProductBizImpl;
 import com.zzy.biz.impl.SendCloudMail;
 import com.zzy.biz.impl.SendMail;
 import com.zzy.enums.NewsType;
 import com.zzy.enums.ProductType;
 import com.zzy.enums.StatusType;
 import com.zzy.model.MailUserInfo;
-import com.zzy.model.News;
-import com.zzy.model.Product;
 import com.zzy.util.Log;
 import com.zzy.util.Paging;
 import com.zzy.view.EmailTaskView;
@@ -315,25 +309,6 @@ public class EmailApi extends BaseWebApi implements ApiService {
 		return apiResult;
 	}
 	
-//------------------------------------------------------------------------------------//
-	
-	@ApiPath("/email/select/product")     //获取全部商品
-	public static ApiResult selectProduct(ApiRequest request, ApiUser user) {
-		IProductBiz productBiz = new ProductBizImpl();
-		ProductType productType = request.getParam("productType", ProductType.class);
-		Paging paging = getPaging(request);
-		List<Product> list = productBiz.findProduct(productType, paging);
-		return getResult(list);
-	}
-	
-	@ApiPath("/email/select/news")     //获取全部商品
-	public static ApiResult selectNews(ApiRequest request, ApiUser user) {
-		INewsBiz newsBiz = new NewsBizImpl();
-		NewsType newsType = request.getParam("newsType", NewsType.class);
-		Paging paging = getPaging(request);
-		List<News> list = newsBiz.findProduct(newsType, paging);
-		return getResult(list);
-	}
-	
+
 	
 }

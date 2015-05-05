@@ -8,14 +8,14 @@ package com.zzy.biz;
 
 import java.util.List;
 
-import com.zzy.enums.ProductType;
-import com.zzy.model.Product;
+import com.zzy.enums.NewsType;
+import com.zzy.model.Event;
 import com.zzy.util.Paging;
 
 
 
 
 
-public interface IProductBiz{
-	public List<Product> findProduct(ProductType productType,Paging paging);
+public interface IEventBiz{
+	public List<Event> findEvent(Paging paging);
 }
