@@ -18,7 +18,7 @@ public class HibernateManager {
 		} catch (Throwable ex) {
 			throw new ExceptionInInitializerError(ex);
 		}
-		localSession = new ThreadLocal();
+		localSession = new ThreadLocal<Session>();
 	}
 
 	//获取sessionFactory

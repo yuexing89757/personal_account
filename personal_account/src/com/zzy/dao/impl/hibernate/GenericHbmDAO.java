@@ -34,9 +34,6 @@ public abstract class GenericHbmDAO<T, ID extends Serializable>
 
 	private Class<T> persistentClass;
 	private Session session;
-	
-	private GetShardType shardType;  //shard专用
-	private Long adId;  //shard专用
 
 	public GenericHbmDAO() {
 		this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
