@@ -15,7 +15,6 @@ import org.hibernate.criterion.Example;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 
-import com.zzy.dao.dbshard.HibernateManagerShard;
 import com.zzy.dao.dbtool.HibernateManager;
 import com.zzy.enums.GetShardType;
 import com.zzy.util.LanguageKey;
